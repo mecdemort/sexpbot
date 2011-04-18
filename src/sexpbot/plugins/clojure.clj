@@ -243,7 +243,7 @@ Return a seq of strings to be evaluated. Usually this will be either nil or a on
                                (catch LispReader$ReaderException _
                                  sentinel))))))))))
 
-(defn findfn-pluginfn [f argstr]
+(defn pluginfn [f argstr]
   (try
     (let [argvec (vec (read-findfn-args argstr))
           _ (sb argvec)       ; a lame hack to get sandbox
